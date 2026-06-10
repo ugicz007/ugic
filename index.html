@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UGi(c) — rozcestník</title>
+  <meta name="description" content="Přehled aplikací a projektů." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a222d;
+      --border: #2d3a4a;
+      --text: #e8eef4;
+      --muted: #8fa3b8;
+      --accent: #5eb8ff;
+      --accent-dim: #3d8fcc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: clamp(1.5rem, 4vw, 3rem);
+    }
+    .wrap {
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      color: var(--muted);
+      margin-top: 0.35rem;
+      font-size: 1rem;
+    }
+    ul.apps {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .apps a {
+      display: block;
+      padding: 1rem 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text);
+      text-decoration: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .apps a:hover {
+      border-color: var(--accent-dim);
+      box-shadow: 0 0 0 1px var(--accent-dim);
+    }
+    .apps a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .apps strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+    }
+    .apps .desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    .apps .url {
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-top: 0.35rem;
+      word-break: break-all;
+    }
+    li.placeholder {
+      padding: 1rem 1.25rem;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      opacity: 0.92;
+    }
+    li.placeholder strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+    }
+    li.placeholder .desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>UGi(c)</h1>
+      <p class="lead">Rozcestník aplikací a projektů.</p>
+    </header>
+
+    <ul class="apps">
+      <li>
+        <a href="https://ugis-bills.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <strong>Účtenkář</strong>
+          <span class="desc">Účtenky a faktury — hlavní web aplikace.</span>
+          <span class="url">ugis-bills.vercel.app</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://ja-cv.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <strong>CV Generator</strong>
+          <span class="desc">Příprava CV na míru poptávky</span>
+          <span class="url">ja-cv.vercel.app</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://pivnicek.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <strong>Pivníček 🍺</strong>
+          <span class="desc">Sousedská pivní hodnoticí appka — zapiš pivo, ohodnoť, sleduj žebříček.</span>
+          <span class="url">pivnicek.vercel.app</span>
+        </a>
+      </li>
+      <!-- Jakmile budeš mít URL, nahraď celý <li class="placeholder"> za odkaz jako u Účtenkáře. -->
+      <li class="placeholder">
+        <strong>Kapibaří válečník</strong>
+        <span class="desc">Veřejný odkaz zatím není nastavený — doplníš ho v souboru index.html v tomto projektu.</span>
+      </li>
+    </ul>
+
+    <footer>
+      Doména projektu na Vercelu: <strong style="color: var(--text); font-weight: 600;">ugic.vercel.app</strong>
+    </footer>
+  </div>
+</body>
+</html>
