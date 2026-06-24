@@ -37,6 +37,9 @@
     }
     header {
       margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
     }
     h1 {
       font-size: clamp(1.5rem, 4vw, 2rem);
@@ -55,7 +58,9 @@
       gap: 0.75rem;
     }
     .apps a {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
       padding: 1rem 1.25rem;
       background: var(--surface);
       border: 1px solid var(--border);
@@ -71,6 +76,23 @@
     .apps a:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 2px;
+    }
+    .app-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      user-select: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .app-details {
+      flex-grow: 1;
     }
     .apps strong {
       display: block;
@@ -113,58 +135,82 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>UGi(c)</h1>
-      <p class="lead">Rozcestník aplikací a projektů.</p>
+      <div class="app-icon" style="background-color: #0f1419; color: #e8eef4; border: 1px solid var(--border); width: 56px; height: 56px; font-size: 1.4rem; border-radius: 14px;">JA</div>
+      <div>
+        <h1>UGi(c)</h1>
+        <p class="lead">Rozcestník aplikací a projektů.</p>
+      </div>
     </header>
 
     <ul class="apps">
       <li>
         <a href="https://ugis-bills.vercel.app/" target="_blank" rel="noopener noreferrer">
-          <strong>Účtenkář</strong>
-          <span class="desc">Účtenky a faktury — hlavní web aplikace.</span>
-          <span class="url">ugis-bills.vercel.app</span>
+          <div class="app-icon" style="background-color: #0F172B; color: #ffffff; border: 1px solid #1e293b;">BL</div>
+          <div class="app-details">
+            <strong>Účtenkář</strong>
+            <span class="desc">Účtenky a faktury — hlavní web aplikace.</span>
+            <span class="url">ugis-bills.vercel.app</span>
+          </div>
         </a>
       </li>
       <li>
         <a href="https://ja-cv.vercel.app/" target="_blank" rel="noopener noreferrer">
-          <strong>CV Generator</strong>
-          <span class="desc">Příprava CV na míru poptávky</span>
-          <span class="url">ja-cv.vercel.app</span>
+          <div class="app-icon" style="background-color: #155DFC; color: #ffffff;">CV</div>
+          <div class="app-details">
+            <strong>CV Generator</strong>
+            <span class="desc">Příprava CV na míru poptávky</span>
+            <span class="url">ja-cv.vercel.app</span>
+          </div>
         </a>
       </li>
       <li>
         <a href="https://pivnicek.vercel.app/" target="_blank" rel="noopener noreferrer">
-          <strong>Pivníček 🍺</strong>
-          <span class="desc">Sousedská pivní hodnoticí appka — zapiš pivo, ohodnoť, sleduj žebříček.</span>
-          <span class="url">pivnicek.vercel.app</span>
+          <div class="app-icon" style="background-color: #D97706; color: #ffffff;">PI</div>
+          <div class="app-details">
+            <strong>Pivníček 🍺</strong>
+            <span class="desc">Sousedská pivní hodnoticí appka — zapiš pivo, ohodnoť, sleduj žebříček.</span>
+            <span class="url">pivnicek.vercel.app</span>
+          </div>
         </a>
       </li>
       <li>
         <a href="https://ugis-second-brain.vercel.app/adc" target="_blank" rel="noopener noreferrer">
-          <strong>Second Brain</strong>
-          <span class="desc">Autonomous Digital Co — board dashboard, agenti a schvalovací fronta.</span>
-          <span class="url">ugis-second-brain.vercel.app/adc</span>
+          <div class="app-icon" style="background-color: #8B5CF6; color: #ffffff;">SB</div>
+          <div class="app-details">
+            <strong>Second Brain</strong>
+            <span class="desc">Autonomous Digital Co — board dashboard, agenti a schvalovací fronta.</span>
+            <span class="url">ugis-second-brain.vercel.app/adc</span>
+          </div>
         </a>
       </li>
       <li>
         <a href="https://kapi-valecnik.vercel.app/" target="_blank" rel="noopener noreferrer">
-          <strong>Kapibaří válečník</strong>
-          <span class="desc">Gamifikovaná cesta válečníka — questy, shop, Tabata tréninky.</span>
-          <span class="url">kapi-valecnik.vercel.app</span>
+          <div class="app-icon" style="background-color: #EA580C; color: #ffffff;">KV</div>
+          <div class="app-details">
+            <strong>Kapibaří válečník</strong>
+            <span class="desc">Gamifikovaná cesta válečníka — questy, shop, Tabata tréninky.</span>
+            <span class="url">kapi-valecnik.vercel.app</span>
+          </div>
         </a>
       </li>
       <li>
         <a href="https://ckbk.jindrich-augusta.workers.dev/" target="_blank" rel="noopener noreferrer">
-          <strong>CookBook 🍳</strong>
-          <span class="desc">Chytrá online kuchařka — AI asistent, OCR z fotky, import z URL a sdílení receptů.</span>
-          <span class="url">ckbk.jindrich-augusta.workers.dev</span>
+          <div class="app-icon" style="background-color: #00D492; color: #0f1419;">CB</div>
+          <div class="app-details">
+            <strong>CookBook 🍳</strong>
+            <span class="desc">Chytrá online kuchařka — AI asistent, OCR z fotky, import z URL a sdílení receptů.</span>
+            <span class="url">ckbk.jindrich-augusta.workers.dev</span>
+          </div>
         </a>
       </li>
       <li>
         <a href="https://ugis-pfm.vercel.app/" target="_blank" rel="noopener noreferrer">
-          <strong>PFM — Personal Finance Manager</strong>
-          <span class="desc">Správa osobních financí — účty, transakce, portfolia a přehledy.</span>
-          <span class="url">ugis-pfm.vercel.app</span>
+          <div class="app-icon" style="background-color: #009A9B; color: #ffffff;">PF</div>
+          <div class="app-details">
+            <strong>PFM — Personal Finance Manager</strong>
+            <span class="desc">Správa osobních financí — účty, transakce, portfolia a přehledy.</span>
+            <span class="url">ugis-pfm.vercel.app</span>
+          </div>
         </a>
       </li>
     </ul>
